@@ -19,35 +19,83 @@ body{
 
 #news{
     width:100%;
-    max-width:1200px;
+    max-width:1300px;
     margin:0 auto;
-    padding:10px;
+    padding:15px;
 }
 
-/* Verberg de kop van het RSS-overzicht */
+/* Verberg de RSS-kop */
 #news h1:first-child{
     display:none;
 }
 
-/* Mooie opmaak voor de artikelen */
+/* Nieuwsberichten */
 #news article{
+    display:flex;
+    gap:25px;
+    align-items:flex-start;
     margin-bottom:40px;
     padding-bottom:30px;
-    border-bottom:1px solid #ddd;
+    border-bottom:1px solid #e5e5e5;
 }
 
-#news img{
-    max-width:100%;
-    height:auto;
+/* Afbeeldingen groter */
+#news article img{
+    width:320px;
+    min-width:320px;
+    height:180px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+/* Koppen groter */
+#news article h2{
+    margin:0 0 10px 0;
+    font-size:28px;
+    line-height:1.2;
+    font-weight:700;
+}
+
+#news article p{
+    font-size:17px;
+    line-height:1.6;
+    color:#333;
 }
 
 a{
-    color:#005baa;
+    color:#111;
     text-decoration:none;
 }
 
 a:hover{
-    text-decoration:underline;
+    color:#c60000;
+}
+
+/* Mobiele weergave */
+@media (max-width:768px){
+
+    #news{
+        padding:10px;
+    }
+
+    #news article{
+        display:block;
+    }
+
+    #news article img{
+        width:100%;
+        height:auto;
+        min-width:auto;
+        margin-bottom:12px;
+    }
+
+    #news article h2{
+        font-size:24px;
+    }
+
+    #news article p{
+        font-size:16px;
+    }
 }
 </style>
 
