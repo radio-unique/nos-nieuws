@@ -42,7 +42,12 @@ fetch(apiUrl)
 
           <small>${new Date(item.pubDate).toLocaleString("nl-NL")}</small>
 
-          <p>${item.description.replace(/<img[^>]*>/i,"")}</p>
+          <p>${
+item.description
+.replace(/<img[^>]*>/gi,"")
+.replace(/<[^>]+>/g,"")
+.substring(0,220)
+}...</p>
 
         </div>
 
