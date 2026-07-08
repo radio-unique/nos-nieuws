@@ -28,7 +28,7 @@ fetch(apiUrl)
       }
 
       html += `
-      <article>
+      <article class="artikel">
 
         ${image ? `<img src="${image}" alt="">` : ""}
 
