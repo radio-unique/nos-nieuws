@@ -5,7 +5,7 @@ fetch(apiUrl)
   .then(response => response.json())
   .then(data => {
 
-    const container = document.getElementById("news");
+    const container = document.getElementById("nieuws");
 
     if (!data.items || data.items.length === 0) {
       container.innerHTML = "<p>Geen nieuws gevonden.</p>";
@@ -62,7 +62,7 @@ item.description
 
   .catch(error=>{
 
-      document.getElementById("news").innerHTML="<p>Kon het nieuws niet laden.</p>";
+      document.getElementById("nieuws").innerHTML = ...
 
       console.error(error);
 
