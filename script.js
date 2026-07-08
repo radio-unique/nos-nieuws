@@ -60,10 +60,11 @@ item.description
 
   })
 
-  .catch(error=>{
+  .catch(error => {
 
-      document.getElementById("nieuws").innerHTML = ...
+    document.getElementById("nieuws").innerHTML =
+        "<p>Kon het nieuws niet laden.</p>";
 
-      console.error(error);
+    console.error(error);
 
-  });
+});
